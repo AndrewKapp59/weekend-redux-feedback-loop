@@ -15,7 +15,7 @@ function Feeling() {
 
     dispatch({
       type: 'ADD_FEELING',
-      payload: feeling,
+      payload: {feeling},
     });
 
     setFeeling('');

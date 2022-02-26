@@ -15,7 +15,7 @@ function Support() {
 
     dispatch({
       type: 'ADD_COMMENT',
-      payload: comment,
+      payload: {comment},
     });
 
     setComment('');

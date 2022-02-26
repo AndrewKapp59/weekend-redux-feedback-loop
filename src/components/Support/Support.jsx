@@ -15,7 +15,7 @@ function Support() {
 
     dispatch({
       type: 'ADD_SUPPORT',
-      payload: support,
+      payload: {support},
     });
 
     setSupport('');

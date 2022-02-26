@@ -8,10 +8,10 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 const currentFeedback = (state = {
-  feeling: 0,
-  understanding: 0,
-  support: 0,
-  comment: '',
+  // feeling: 0,
+  // understanding: 0,
+  // support: 0,
+  // comment: '',
 }, action) => {
 
   if (action.type === 'ADD_FEELING') {
@@ -20,7 +20,7 @@ const currentFeedback = (state = {
 
       return {
           ...state,
-          feeling: feeling,
+          feeling: Number(feeling),
       }
   }
   if (action.type === 'ADD_UNDERSTANDING') {
@@ -29,7 +29,7 @@ const currentFeedback = (state = {
 
       return {
           ...state,
-          understanding: understanding,
+          understanding: Number(understanding),
       }
   }
   if (action.type === 'ADD_SUPPORT') {
@@ -38,7 +38,7 @@ const currentFeedback = (state = {
 
       return {
           ...state,
-          support: support,
+          support: Number(support),
       }
   }
   if (action.type === 'ADD_COMMENT') {

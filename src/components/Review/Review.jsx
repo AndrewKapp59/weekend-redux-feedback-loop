@@ -11,9 +11,10 @@ function Review() {
 
   const handleSubmit = event => {
     event.preventDefault();
+    console.log(feedback);
   
     // TODO - axios request to server to add feedback
-    axios.post('/feedback', {feedback} )
+    axios.post('/feedback', feedback )
       .then(response => {
         console.log('Feedback posted');
       })
@@ -35,6 +36,8 @@ function Review() {
   )
 
 }
+
+export default Review;
 
 
 

@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding'
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <ul>
           <li>
             <Link to="/">Feeling</Link>
+          </li>
+          <li>
+            <Link to="/">Understanding</Link>
           </li>
           <li>
             <Link to="/support">Support</Link>
@@ -26,13 +30,13 @@ function App() {
             <Link to="/feedback">Feedback</Link>
           </li>
         </ul>
-        <Route path="/">
+        <Route path="/" exact>
           <Feeling />
         </Route>
-        {/* <Route path="/understanding" exact>
+        <Route path="/understanding" exact>
           <Understanding />
         </Route>
-        <Route path="/support" exact>
+        {/* <Route path="/support" exact>
           <Support />
         </Route>
         <Route path="/comments" exact>

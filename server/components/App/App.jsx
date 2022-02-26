@@ -1,4 +1,3 @@
-import Feeling from '../Feeling/Feeling'
 
 function App() {
 
@@ -25,7 +24,7 @@ function App() {
           <Link to="/feedback">feedback</Link>
         </li>
       </ul>
-      <Route path="/" exact>
+      <Route path="/" >
         <Feeling />  
       </Route>
       <Route path="/understanding" exact>
@@ -46,6 +45,4 @@ function App() {
     </div>
   </Router>
   )
-
-  
 }

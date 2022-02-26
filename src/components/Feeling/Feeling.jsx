@@ -10,10 +10,6 @@ function Feeling() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleFeedbackChange = (event) => {
-    setFeeling(event.target.value)
-  };
-
   const handleFeedbackSubmit = (event) => {
     event.preventDefault();
 
@@ -23,26 +19,23 @@ function Feeling() {
     });
 
     setFeeling('');
-  };
 
-  const handleClick = () => {
-    //change location
     history.push('/understanding');
-  }
+  };
 
   return (
     <section>
       <Header />
       <h1>How are you feeling today?</h1>
-      <form onSubmit={handleFeedbackSubmit} className="form-input">
+      <form onSubmit={handleFeedbackSubmit}>
         <input
           required
           type="number"
           placeholder="0"
           value={feeling}
-          onChange={handleFeedbackChange}
+          onChange={(event) => setFeeling(event.target.value)}
         />
-        <button type="submit" onClick={handleClick}>Next</button>
+        <input value="Next" type="submit" />
       </form>
     </section>
   );

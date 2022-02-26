@@ -10,10 +10,6 @@ function Understanding() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleFeedbackChange = (event) => {
-    setUnderstanding(event.target.value)
-  };
-
   const handleFeedbackSubmit = (event) => {
     event.preventDefault();
 
@@ -23,12 +19,9 @@ function Understanding() {
     });
 
     setUnderstanding('');
-  };
 
-  const handleClick = () => {
-    //change location
     history.push('/support');
-  }
+  };
 
   return (
     <section>
@@ -40,9 +33,9 @@ function Understanding() {
           type="number"
           placeholder="0"
           value={understanding}
-          onChange={handleFeedbackChange}
+          onChange={(event) => setUnderstanding(event.target.value)}
         />
-        <button type="submit" onClick={handleClick}>Next</button>
+        <input value="Next" type="submit" />
       </form>
     </section>
   );

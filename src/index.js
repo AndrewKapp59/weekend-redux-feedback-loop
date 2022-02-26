@@ -7,21 +7,6 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-
-// const feeling = (state = {}, action) => {
-//   if (action.type === 'ADD_FEELING') {
-//     return action.payload
-//   }
-//   return state;
-// }
-
-// const understanding = (state = [], action) => {
-//   if (action.type === 'ADD_UNDERSTANDING') {
-//     return action.payload
-//   }
-//   return state;
-// }
-
 const currentFeedback = (state = {
   feeling: 0,
   understanding: 0,

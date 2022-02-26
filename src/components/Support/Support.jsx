@@ -10,10 +10,6 @@ function Support() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const handleFeedbackChange = (event) => {
-    setSupport(event.target.value)
-  };
-
   const handleFeedbackSubmit = (event) => {
     event.preventDefault();
 
@@ -23,26 +19,24 @@ function Support() {
     });
 
     setSupport('');
+
+    history.push('/comments');
   };
 
-  const handleClick = () => {
-    //change location
-    history.push('/support');
-  }
 
   return (
     <section>
       <Header />
-      <h1>How well are you support the content?</h1>
+      <h1>How well are you being supported?</h1>
       <form onSubmit={handleFeedbackSubmit} className="form-input">
         <input
           required
           type="number"
           placeholder="0"
           value={support}
-          onChange={handleFeedbackChange}
+          onChange={(event) => setSupport(event.target.value)}
         />
-        <button type="submit" onClick={handleClick}>Next</button>
+        <input value="Next" type="submit"/>
       </form>
     </section>
   );

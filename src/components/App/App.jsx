@@ -7,12 +7,13 @@ import Understanding from '../Understanding/Understanding'
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review'
+import Success from '../Success/Success'
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Feeling</Link>
           </li>
@@ -29,9 +30,9 @@ function App() {
             <Link to="/review">Review</Link>
           </li>
           <li>
-            <Link to="/feedback">Feedback</Link>
+            <Link to="/success">Success</Link>
           </li>
-        </ul>
+        </ul> */}
         <Route path="/" exact>
           <Feeling />
         </Route>
@@ -47,9 +48,9 @@ function App() {
         <Route path="/review" exact>
           <Review />
         </Route>
-        {/* <Route path="/feedback" exact>
-          <Feedback />
-        </Route> */}
+        <Route path="/success" exact>
+          <Success />
+        </Route>
       </div>
     </Router>
   );

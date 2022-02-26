@@ -1,9 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 
 function Review() {
+
+  const history = useHistory();
 
   const feedback = useSelector((store) => store.currentFeedback)
 
@@ -22,6 +25,8 @@ function Review() {
         console.log('Error Posting', error);
         alert('🤬');
       })
+
+      history.push('/success');
   };
 
   return(

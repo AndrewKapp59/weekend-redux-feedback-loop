@@ -2,20 +2,16 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #033076;
+.Feedback-header {
+  background-color: #5785ce;
   min-height: 70px;
   padding: 20px;
   color: white;
   margin-bottom: 20px;
 }
 
-.App-title {
+.Feedback-title {
   font-size: 2em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 h4 {

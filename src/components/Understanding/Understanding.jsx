@@ -32,7 +32,7 @@ function Understanding() {
       <div className='box'>
         <Box
           sx={{
-            marginTop: 30,
+            marginTop: 25,
             marginBottom: 80,
             width: 700,
             height: 325,

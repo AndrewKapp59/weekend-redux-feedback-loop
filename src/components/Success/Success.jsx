@@ -1,6 +1,10 @@
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+
 import { useHistory } from 'react-router-dom';
+import './Success.css'
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
 function Success() {
 
@@ -10,17 +14,36 @@ function Success() {
     history.push('/');
   }
 
-
   return (
-    <>
-      <div>
-        <h1>Feedback</h1>
+    <React.Fragment>
+       <div className="box">
+        <Box
+          sx={{
+            marginTop: 25,
+            marginBottom: 80,
+            width: 700,
+            height: 325,
+            bgcolor: 'rgb(214, 226, 236)',
+            borderRadius: 5,
+          }}
+        >
+        <div className='thanks'>
+          <Typography sx={{ fontSize: 50, marginTop: 4 }} color="text.primary" gutterBottom>
+            Thank You!
+          </Typography>
+        </div>
+          <div className='submit'>
+            <Button variant="contained" onClick={handleClick}>
+              Submit New Feedback
+            </Button>
+          </div>
+        </Box>
       </div>
       <div>
         <h1>Thank You!</h1>
       </div>
       <button onClick={handleClick}>Leave New Feedback</button>
-    </>
+    </React.Fragment>
   );
 }
 

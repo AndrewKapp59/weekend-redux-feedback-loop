@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './Review.css';
 import Button from '@mui/material/Button';
@@ -11,8 +11,6 @@ function Review() {
   const history = useHistory();
 
   const feedback = useSelector((store) => store.currentFeedback);
-
-  console.log(feedback);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -78,10 +76,11 @@ function Review() {
               Comments: {feedback.comment}
             </Typography>
           </div>
-          <Button variant="contained" onClick={handleSubmit}>
-            Submit
-          </Button>
-          {/* <button onClick={handleSubmit}>Submit</button> */}
+          <div className='submit'>
+            <Button variant="contained" onClick={handleSubmit}>
+              Submit
+            </Button>
+          </div>
         </Box>
       </div>
     </React.Fragment>

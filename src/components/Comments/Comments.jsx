@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 
 function Support() {
-  const [comment, setComment] = useState('');
+  const [comments, setComments] = useState('');
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -19,10 +19,10 @@ function Support() {
 
     dispatch({
       type: 'ADD_COMMENT',
-      payload: { comment },
+      payload: { comments },
     });
 
-    setComment('');
+    setComments('');
 
     history.push('/review');
   };
@@ -57,13 +57,12 @@ function Support() {
               ></Box>
               <TextField 
                 required
-                value={comment}
-                onChange={(event) => {setComment(event.target.value)}}
+                value={comments}
+                onChange={(event) => {setComments(event.target.value)}}
                 id="outlined-basic" 
                 label="Comments" 
                 variant="outlined"
                 autoComplete='off'
-                // onSubmit={handleFeedbackSubmit}
               />
             </div>
             <div className="next">

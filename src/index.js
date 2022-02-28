@@ -43,11 +43,11 @@ const currentFeedback = (state = {
   }
   if (action.type === 'ADD_COMMENT') {
 
-      const { comment } = action.payload;
+      const { comments } = action.payload;
 
       return {
           ...state,
-          comment: comment,
+          comment: comments,
       }
   }
 

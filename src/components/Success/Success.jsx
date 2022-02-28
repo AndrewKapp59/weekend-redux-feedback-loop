@@ -40,10 +40,6 @@ function Success() {
           </div>
         </Box>
       </div>
-      <div>
-        <h1>Thank You!</h1>
-      </div>
-      <button onClick={handleClick}>Leave New Feedback</button>
     </React.Fragment>
   );
 }

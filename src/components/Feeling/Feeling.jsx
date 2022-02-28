@@ -86,7 +86,7 @@ function Feeling() {
             bgcolor: 'rgb(214, 226, 236)',
             background: 'opacity 0.5',
             borderRadius: 5,
-            boxShadow: '0px 0px 20px 1px rgba(153,153,153,1)'
+            boxShadow: '0px 0px 9px 1px rgba(153,153,153,1)'
           }}
         >
           <Header />

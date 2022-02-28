@@ -8,7 +8,6 @@ import Header from '../Header/Header';
 import Button from '@mui/material/Button';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
-// import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
@@ -58,6 +57,7 @@ function Feeling() {
 
   const dispatch = useDispatch();
   const history = useHistory();
+  
   const handleFeedbackSubmit = (event) => {
     event.preventDefault();
 
@@ -81,11 +81,10 @@ function Feeling() {
           sx={{
             marginTop: 30,
             marginBottom: 80,
-            width: 800,
+            width: 700,
             height: 300,
             bgcolor: 'rgb(214, 226, 236)',
             borderRadius: 5,
-
           }}
         >
           <Header />
@@ -108,34 +107,6 @@ function Feeling() {
           </div>
         </Box>
       </div>
-
-
-      {/* <Container maxWidth="md">
-        <Box sx={{ 
-          bgcolor: 'rgb(214, 226, 236)', 
-          height: '100vh', 
-          marginTop: 45, 
-          }}>
-          <Header />
-          <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
-            How are you feeling today?
-          </Typography>
-          <Rating
-            name="highlight-selected-only"
-            defaultValue={3}
-            IconContainerComponent={IconContainer}
-            highlightSelectedOnly
-            onChange={(event, newValue) => {
-              setFeeling(newValue);
-            }}
-          />
-          <div className="next">
-            <Button variant="contained" onClick={handleFeedbackSubmit}>
-              Next
-            </Button>
-          </div>
-        </Box>
-      </Container> */}
     </React.Fragment>
   );
 }

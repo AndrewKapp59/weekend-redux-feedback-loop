@@ -37,36 +37,41 @@ function Support() {
             width: 700,
             height: 325,
             bgcolor: 'rgb(214, 226, 236)',
+            background: 'opacity 0.5',
             borderRadius: 5,
+            boxShadow: '0px 0px 20px 1px rgba(153,153,153,1)'
           }}
         >
         <Header />
         <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
           Any comments you want to leave?
         </Typography>
-        <div className='box'>
-          <Box
-            component="form"
-            sx={{
-              '& > :not(style)': { m: 1, width: '150ch' },
-            }}
-            noValidate
-            autoComplete="off"
-          ></Box>
-          <TextField 
-          value={comment}
-          onChange={(event) => {setComment(event.target.value)}}
-          id="outlined-basic" 
-          label="Comments" 
-          variant="outlined"
-          autoComplete='off'
-          />
-        </div>
-        <div className="next">
-        <Button variant="contained" onClick={handleFeedbackSubmit}>
-          Next
-        </Button>
-        </div>
+        <form onSubmit={handleFeedbackSubmit}>
+            <div className='box'>
+              <Box
+                sx={{
+                  '& > :not(style)': { m: 1, width: '150ch' },
+                }}
+                noValidate
+                autoComplete="off"
+              ></Box>
+              <TextField 
+                required
+                value={comment}
+                onChange={(event) => {setComment(event.target.value)}}
+                id="outlined-basic" 
+                label="Comments" 
+                variant="outlined"
+                autoComplete='off'
+                // onSubmit={handleFeedbackSubmit}
+              />
+            </div>
+            <div className="next">
+            <Button type='submit' variant="contained">
+              Next
+            </Button>
+            </div>
+          </form>
         </Box>
       </div>
     </React.Fragment>

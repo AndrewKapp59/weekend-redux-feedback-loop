@@ -1,16 +1,11 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
-function valuetext(value) {
-  return `${value}°C`;
-}
 
 function Understanding() {
   const [understanding, setUnderstanding] = useState('');
@@ -54,9 +49,7 @@ function Understanding() {
                 onChange={(event, newValue) => {
                   setUnderstanding(newValue);
                 }}
-                // aria-label="Temperature"
                 defaultValue={5}
-                getAriaValueText={valuetext}
                 valueLabelDisplay="auto"
                 step={1}
                 marks
@@ -65,7 +58,6 @@ function Understanding() {
               />
             </Box>
           </div>
-
           <div className="next">
             <Button variant="contained" onClick={handleFeedbackSubmit}>
               Next

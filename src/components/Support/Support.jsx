@@ -1,10 +1,13 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../Header/Header';
+import Button from '@mui/material/Button';
+import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function Support() {
-
   const [support, setSupport] = useState('');
 
   const dispatch = useDispatch();
@@ -15,7 +18,7 @@ function Support() {
 
     dispatch({
       type: 'ADD_SUPPORT',
-      payload: {support},
+      payload: { support },
     });
 
     setSupport('');
@@ -23,22 +26,46 @@ function Support() {
     history.push('/comments');
   };
 
-
   return (
-    <section>
-      <Header />
-      <h1>How well are you being supported?</h1>
-      <form onSubmit={handleFeedbackSubmit} className="form-input">
-        <input
-          required
-          type="number"
-          placeholder="0"
-          value={support}
-          onChange={(event) => setSupport(event.target.value)}
-        />
-        <input value="Next" type="submit"/>
-      </form>
-    </section>
+    <React.Fragment>
+      <div className='box'>
+        <Box
+          sx={{
+            marginTop: 30,
+            marginBottom: 80,
+            width: 700,
+            height: 300,
+            bgcolor: 'rgb(214, 226, 236)',
+            borderRadius: 5,
+          }}
+        >
+        <Header />
+        <Typography sx={{ fontSize: 25 }} color="text.secondary" gutterBottom>
+          How well are you being supported?
+        </Typography>
+        <div className='box'>
+            <Box sx={{ width: 200}}>
+              <Slider
+                onChange={(event, newValue) => {
+                  setSupport(newValue);
+                }}
+                defaultValue={5}
+                valueLabelDisplay="auto"
+                step={1}
+                marks
+                min={0}
+                max={10}
+              />
+            </Box>
+          </div>
+          <div className="next">
+            <Button variant="contained" onClick={handleFeedbackSubmit}>
+              Next
+            </Button>
+          </div>
+        </Box>
+      </div>
+    </React.Fragment>
   );
 }
 

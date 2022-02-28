@@ -1,0 +1,16 @@
+.next {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

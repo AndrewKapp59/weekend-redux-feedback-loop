@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import './Support.css'
 import Header from '../Header/Header';
 import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
@@ -8,7 +9,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 function Support() {
-  const [support, setSupport] = useState('');
+  const [support, setSupport] = useState(5);
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -31,10 +32,10 @@ function Support() {
       <div className='box'>
         <Box
           sx={{
-            marginTop: 30,
+            marginTop: 25,
             marginBottom: 80,
             width: 700,
-            height: 300,
+            height: 325,
             bgcolor: 'rgb(214, 226, 236)',
             borderRadius: 5,
           }}

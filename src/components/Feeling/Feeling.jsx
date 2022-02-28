@@ -53,7 +53,7 @@ IconContainer.propTypes = {
 // Feeling component for recording the user input
 function Feeling() {
   //records that state of the feeling input
-  const [feeling, setFeeling] = useState('');
+  const [feeling, setFeeling] = useState(3);
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -79,10 +79,10 @@ function Feeling() {
       <div className='box'>
         <Box
           sx={{
-            marginTop: 30,
+            marginTop: 25,
             marginBottom: 80,
             width: 700,
-            height: 300,
+            height: 325,
             bgcolor: 'rgb(214, 226, 236)',
             borderRadius: 5,
           }}

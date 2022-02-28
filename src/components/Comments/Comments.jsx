@@ -63,9 +63,9 @@ function Support() {
           />
         </div>
         <div className="next">
-            <Button variant="contained" onClick={handleFeedbackSubmit}>
-              Next
-            </Button>
+        <Button variant="contained" onClick={handleFeedbackSubmit}>
+          Next
+        </Button>
         </div>
         </Box>
       </div>
